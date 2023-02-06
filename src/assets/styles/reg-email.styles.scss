@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap');
+
+.form {
+  max-width: 940px;
+  height: 232px;
+  background: #FFFFFF;
+  border-radius: 20px;
+  border: 2px solid #ECEFF1;
+
+  &__email {
+    width: 65%;
+
+    &__input {
+      width: 100%;
+      height: 56px;
+      border: 1px solid #f5f5f5;
+      padding: 11px 12px;
+      box-shadow: none;
+      border-radius: 20px;
+      background: #F5F6F7;
+      font-size: 16px;
+      line-height: 16px;
+      font-family: 'Source Sans 3', sans-serif;
+      letter-spacing: 0.65px;
+    }
+
+    &__input:focus {
+      outline:none;
+      border: 1px solid #8071F3;
+    }
+
+    &__button {
+      width: 100%;
+      height: 56px;
+      background: #8071F3;
+      border-radius: 20px;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      font-size: 16px;
+      line-height: 16px;
+      font-family: 'Source Sans Pro', sans-serif;
+      letter-spacing: 0.65px;
+      border: none;
+      cursor: pointer
+    }
+
+    &__button:hover {
+      background: #6d5ceb;
+    }
+
+    &__button:disabled {
+      background: #d9d5fc;
+      cursor: auto;
+    }
+  }
+  
+  &__btn {
+    width: 35%;
+  }
+}
+.auth-email-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 28px 36px;
+  gap: 24px;
+}
+.email-form-title {
+  font-family: 'Source Sans 3';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+  color: #000000;
+}
+.email-form-input-btn {
+  width: 100%;
+  display: flex;
+  gap: 24px;
+}
+::placeholder {
+  font-family: 'Source Sans 3';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.25px;
+  color: rgba(0, 0, 0, 0.38);
+}
+.section2 {
+  display: flex;
+  gap: 25px;
+}
+.checkbox {
+  display: flex;
+  width: 65%;
+}
+.text {
+  text-align: right;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 9px;
+  line-height: 16px;
+  letter-spacing: 0.4px;
+  color: rgba(0, 0, 0, 0.38);
+}
+.real-checkbox {
+  position: relative;
+  opacity: 0;
+  width: 32px;
+  height: 32px;
+  left: 19px;
+  z-index: 1;
+}
+.custom-checkbox {
+  position:relative;
+  display: inline-block;
+  width: 32px;
+  height: 20px;
+  background: #FFFFFF;
+  border: 2px solid #9e9e9e;
+  border-radius: 2px;
+  top: 6px;
+}
+.custom-checkbox::before {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-image: url('../icons/icon-done.svg');
+  background-color:  rgba(0,0,0,0);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 0.2s ease-in;
+}
+.real-checkbox:checked + .custom-checkbox::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+.section2-buttons {
+  width: 35%;
+}
+.section2-btn {
+  width: 100%;
+  margin-top: 7px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.65px;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #8071F3;
+}
+.section2-btn:hover {
+  color: #6654f1;
+}

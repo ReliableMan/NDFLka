@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap');
+
+.header {
+  z-index: 10;
+  height: 64px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  transition: all 0.5s;
+  box-shadow: 
+  0px 1px 10px rgba(0, 0, 0, 0.12), 
+  0px 4px 5px rgba(0, 0, 0, 0.14), 
+  0px 2px 4px rgba(0, 0, 0, 0.2);
+
+  &__logos {
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: #fff;
+  }
+
+  &__logo {
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  &__phone-number {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-box-pack: center;
+    flex-direction: column;
+    gap: 4px;
+    justify-content: center;
+    margin-right: 60px;
+    margin-left: 111px;
+  }
+
+  &__number {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-family: 'Source Sans Pro', sans-serif;
+    line-height: 16px;
+    font-weight: 600;
+    letter-spacing: 0.65px;
+    color: rgba(0, 0, 0, 0.87);
+  }
+
+  &__faq-link {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    margin-right: 60px;
+    margin-left: 21px;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.87);
+    font-family: 'Source Sans Pro', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.65px;
+    text-transform: uppercase;
+  }
+
+  &__user-links {
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 186px;
+    margin-left: 31px;
+    margin-right: 30px;
+  }
+
+  &__user-link-login {
+    position: relative;
+    margin-right: 20px
+  }
+
+  &__user-link-login::after {
+    content: "";
+    height: 16px;
+    width: 1px;
+    background-color: rgba(0,0,0,.87);
+    position: absolute;
+    left: calc(100% + 10px);
+    pointer-events: none;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+
+  &__header-top {
+    display: flex;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    background-color: #fff;
+    position: relative;
+    z-index: 1;
+
+    &__wrap {
+      display: flex;
+      -webkit-box-align: center;
+      align-items: center;
+      -webkit-box-pack: justify;
+      justify-content: space-between;
+      margin-left: auto;
+      margin-right: auto;
+      background-color: #fff;
+    }
+  }
+}
+
+.mobile {
+  display: none
+}
+
+@media (max-width: 1023px) {
+   
+  .header {
+    height: 48px; 
+    transition: all 0.5s;
+
+    &__logos {
+    display: block;
+    margin-right: auto;
+    text-align: center;
+    }
+
+    &__phone-number {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-box-pack: center;
+      margin: 0;
+    }
+
+    &__faq-link {
+      display: flex;
+      -webkit-box-align: center;
+      align-items: center;
+      margin: 0;
+    }
+
+    &__user-links {
+      display: inline-flex;
+      -webkit-box-align: center;
+      align-items: center;
+      width: auto;
+      margin: 0;
+    }
+  }
+  .header__header-top { 
+    padding-top: 6px;
+    padding-bottom: 6px;
+
+    &__wrap {
+      width: 100%;
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+  }
+  .adaptive-logo {
+    max-width: 119px;
+  }
+  .pc-phoneLink, .pc-faqLink, .pc-userLink {
+    display: none;
+  }
+  .mobile {
+    display: inline-flex
+  }
+  .icon {
+    height: 24px;
+    width: 24px;
+  }
+  .pad-mob {
+    padding-left: 12px;
+    padding-right: 12px
+  }
+}
+
+@media (max-width: 767px) {
+  .header {
+    box-shadow: none;
+    transition: all 0.5s;
+  }
+ }

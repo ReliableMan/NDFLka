@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3&display=swap');
+
+.auth-mobile {
+  display: none;
+}
+.auth-title {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.65px;
+  text-transform: uppercase;
+  margin-top: 20px;
+  width: 50%
+}
+.link {
+  text-decoration: none;
+  color: #000000
+}
+.active {
+  border-bottom: 2px solid rgba(0,0,0,.87);
+  color: rgba(0,0,0,.87);
+  padding-bottom: 14px;
+}
+.auth-content {
+  margin-top: 32px;
+
+  &__text {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 16px;
+    letter-spacing: 0.15px;
+    color: #000000;
+  }
+
+  &__input-email {
+    width: 97%;
+    height: 56px;
+    background: #F5F6F7;
+    border: none;
+    border-radius: 20px;
+  }
+
+  &__input-email:focus {
+    outline:none;
+    border: 1px solid #8071F3;
+  }
+
+  &__button-tel {
+    width: 97%;
+    height: 56px;
+    background: #8071F3;
+    border-radius: 20px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    font-size: 16px;
+    line-height: 16px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.65px;
+    border: none;
+    cursor: pointer
+  }
+
+  &__button-tel:hover {
+    background: #6d5ceb;
+  }
+
+  &__button-tel:disabled {
+    background: #d9d5fc;
+    cursor: auto;
+  }
+
+  &__button-email {
+    width: 97%;
+    border: none;
+    background: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.65px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+    color: #8071F3;
+  }
+
+  &__button-email:hover {
+    color: #6654f1;
+  }
+}
+::placeholder {
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.25px;
+  color: rgba(0, 0, 0, 0.38);
+}
+.text-input {
+  padding: 16px 16px;
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+.pd-t {
+  margin-top: 24px;
+}
+.section-work {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border: none;
+  background-color:#FFFFFF;
+  gap: 7px;
+  cursor: pointer;
+
+  &__text {
+    margin-top: 2px;
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.65px;
+    text-decoration-line: underline;
+    text-transform: uppercase; 
+    color: #8071F3;
+  }
+}
+.checkbox {
+  display: flex;
+  gap: 10px;
+}
+.text {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 0.4px;
+  color: rgba(0, 0, 0, 0.38);
+}
+.check__input:checked + .check__box {
+  background-image: url('../icons/icon-done.svg');
+}
+.real-checkbox {
+  position: relative;
+  top: 23px;
+  opacity: 0;
+  width: 18px;
+  height: 18px;
+  z-index: 1;
+  left: 6px
+}
+.custom-checkbox {
+  position:relative;
+  width: 2.5em;
+  height: 1em;
+  background: #FFFFFF;
+  box-shadow: 0 0 0 0.1em #9e9e9e;
+  border-radius: 2px;
+  top: 24px;
+  left: -20px;
+}
+.custom-checkbox::before {
+  content: '';
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  background-image: url('../icons/icon-done.svg');
+  background-color:  rgba(0,0,0,0);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 0.2s ease-in;
+}
+.real-checkbox:checked + .custom-checkbox::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+@media (max-width: 1023px) {
+  .title {
+    margin-top: 24px;
+  } 
+}
+
+@media (max-width: 767px) {
+  .main {
+    display: none
+  }
+}
+
+@media (min-width: 300px) and (max-width: 766px) {
+  .auth-container {
+    max-width: 300px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 45px 0 0;
+  }
+  .auth-mobile {
+    display: flex;
+  }
+}
