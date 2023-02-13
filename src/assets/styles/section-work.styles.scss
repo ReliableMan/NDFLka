@@ -105,3 +105,14 @@
   left: 100px;
   bottom: 135px;
 }
+@media (min-width: 851px) and (max-width: 945px) {
+  .third-block {
+    padding-left: 2%;
+  }
+  .third-row {
+    padding-left: 8%
+  }
+  .fifth-block {
+    padding-left: 2%
+  }
+}
